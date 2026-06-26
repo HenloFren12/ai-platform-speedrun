@@ -1,3 +1,4 @@
+'use client';
 const TESTIMONIALS = [
   {
     quote: "DataFlow AI cut our pipeline setup time from weeks to hours. Absolutely transformative.",

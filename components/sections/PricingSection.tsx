@@ -2,6 +2,8 @@
 import { useRef, useEffect } from 'react';
 import { TIERS, computePrice, Currency, Billing } from '@/lib/pricing';
 import { useState } from 'react';
+import BillingToggle from '../ui/BillingToggle';
+import CurrencySwitcher from '../ui/CurrencySwitcher';
 
 export default function PricingSection() {
   const [billing, setBilling] = useState<Billing>('monthly');
