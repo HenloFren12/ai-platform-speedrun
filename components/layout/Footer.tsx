@@ -22,7 +22,7 @@ export default function Footer() {
               fontFamily: 'var(--font-mono)', fontWeight: 700,
               fontSize: '1.2rem', color: '#F1F6F4', marginBottom: '0.75rem',
             }}>
-              DataFlow<span style={{ color: '#FFC801' }}>AI</span>
+              SpeedRun<span style={{ color: '#FFC801' }}>AI</span>
             </div>
             <p style={{ color: '#D9E8E2', fontSize: '0.85rem', lineHeight: 1.6 }}>
               Next-generation AI data automation for modern engineering teams.
@@ -66,16 +66,16 @@ export default function Footer() {
           alignItems: 'center', flexWrap: 'wrap', gap: '1rem',
         }}>
           <small style={{ color: '#D9E8E2', fontSize: '0.8rem' }}>
-            © {year} DataFlow AI, Inc. All rights reserved.
+            © {year} SpeedRun AI, Inc. All rights reserved.
           </small>
           <address style={{ fontStyle: 'normal' }}>
-            <a href="mailto:hello@dataflowai.com" style={{
+            <a href="mailto:hello@SpeedRunai.com" style={{
               color: '#D9E8E2', fontSize: '0.8rem', textDecoration: 'none',
               transition: 'color 150ms ease-out',
             }}
             onMouseEnter={e => (e.currentTarget.style.color = '#FFC801')}
             onMouseLeave={e => (e.currentTarget.style.color = '#D9E8E2')}
-            >hello@dataflowai.com</a>
+            >hello@SpeedRunai.com</a>
           </address>
         </div>
       </div>

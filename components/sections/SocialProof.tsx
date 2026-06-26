@@ -1,7 +1,7 @@
 'use client';
 const TESTIMONIALS = [
   {
-    quote: "DataFlow AI cut our pipeline setup time from weeks to hours. Absolutely transformative.",
+    quote: "SpeedRun AI cut our pipeline setup time from weeks to hours. Absolutely transformative.",
     name: "Sarah Chen",
     role: "CTO, Nexus Labs",
     avatar: "SC",
@@ -13,7 +13,7 @@ const TESTIMONIALS = [
     avatar: "MW",
   },
   {
-    quote: "We replaced 4 tools with DataFlow AI. Our infra bill dropped 60% in the first month.",
+    quote: "We replaced 4 tools with SpeedRun AI. Our infra bill dropped 60% in the first month.",
     name: "Priya Nair",
     role: "VP Engineering, Stackr",
     avatar: "PN",

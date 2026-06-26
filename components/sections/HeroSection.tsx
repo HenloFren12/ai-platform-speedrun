@@ -1,74 +1,159 @@
-'use client'; // <-- This single line fixes the entire error!
+'use client';
 
 export default function HeroSection() {
   return (
-    <section id="hero" aria-label="Hero" style={{
-      minHeight: '90vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
-      textAlign: 'center', padding: '4rem 2rem',
-      background: 'radial-gradient(ellipse at 50% 0%, rgba(255,200,1,0.08) 0%, transparent 70%)',
+    <section id="features" aria-label="Hero" style={{
+      minHeight: '85vh',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      textAlign: 'center',
+      padding: '6rem 2rem',
+      position: 'relative',
+      background: 'radial-gradient(circle at 50% 20%, rgba(255, 200, 1, 0.05) 0%, transparent 50%), var(--oceanic-noir, #172B36)',
+      overflow: 'hidden'
     }}>
-      <div style={{ maxWidth: 800 }}>
+      {/* Structural Minimalist Grid Pattern Layer */}
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        backgroundImage: 'radial-gradient(rgba(209, 232, 226, 0.04) 1px, transparent 1px)',
+        backgroundSize: '24px 24px',
+        pointerEvents: 'none',
+      }} />
+
+      <div style={{ maxWidth: '850px', position: 'relative', zIndex: 1 }}>
+        {/* Animated Badge Indicator */}
         <div className="animate-1" style={{
-          display: 'inline-block',
-          background: 'rgba(255,200,1,0.1)', border: '1px solid rgba(255,200,1,0.3)',
-          borderRadius: '2rem', padding: '0.3rem 1rem',
-          fontSize: '0.8rem', color: '#FFC801', marginBottom: '1.5rem',
-          fontFamily: 'var(--font-mono)',
+          display: 'inline-flex',
+          alignItems: 'center',
+          background: 'rgba(17, 76, 90, 0.4)',
+          border: '1px solid rgba(209, 232, 226, 0.1)',
+          borderRadius: '9999px',
+          padding: '0.4rem 1.2rem',
+          fontSize: '0.75rem',
+          color: 'var(--mystic-mint, #D9E8E2)',
+          marginBottom: '2rem',
+          fontFamily: 'var(--font-mono, monospace)',
+          fontWeight: 600,
+          letterSpacing: '0.05em',
         }}>
-          ⚡ Now in Public Beta
+          <span style={{
+            width: '6px',
+            height: '6px',
+            borderRadius: '50%',
+            background: 'var(--forsythia, #FFC801)',
+            marginRight: '8px',
+            boxShadow: '0 0 8px var(--forsythia)'
+          }} />
+          SYSTEM STATUS: PUBLIC BETA ACCELERATOR ACTIVE
         </div>
 
+        {/* Hero Main Heading */}
         <h1 className="animate-2" style={{
-          fontFamily: 'var(--font-mono)', fontWeight: 700,
-          fontSize: 'clamp(2.2rem, 5vw, 4rem)',
-          lineHeight: 1.15, marginBottom: '1.5rem',
-          color: '#F1F6F4',
+          fontFamily: 'var(--font-mono, monospace)',
+          fontWeight: 700,
+          fontSize: 'clamp(2.5rem, 6vw, 4.2rem)',
+          lineHeight: 1.1,
+          marginBottom: '1.5rem',
+          color: 'var(--arctic-powder, #F1F6F4)',
+          letterSpacing: '-0.03em',
         }}>
-          Automate Everything.<br />
-          <span style={{ color: '#FFC801' }}>Ship Faster.</span>
+          Automate Data Workflows With <span style={{
+            color: 'transparent',
+            WebkitTextStroke: '1px var(--arctic-powder, #F1F6F4)',
+            backgroundImage: 'linear-gradient(135deg, var(--forsythia) 0%, var(--deep-saffron) 100%)',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text'
+          }}>AI Precision</span>
         </h1>
 
+        {/* Hero Paragraph Subtitle */}
         <p className="animate-2" style={{
-          fontSize: 'clamp(1rem, 2vw, 1.25rem)',
-          color: '#D9E8E2', lineHeight: 1.7,
-          marginBottom: '2.5rem', maxWidth: 600, margin: '0 auto 2.5rem',
+          color: 'var(--mystic-mint, #D9E8E2)',
+          fontSize: 'clamp(1rem, 2vw, 1.2rem)',
+          lineHeight: 1.6,
+          maxWidth: '640px',
+          margin: '0 auto 3rem',
+          opacity: 0.85,
         }}>
-          The next-generation AI data automation platform. Connect 200+ tools,
-          trigger intelligent workflows, and move data at the speed of thought.
+          Connect over 200+ native data tools. Eliminate pipeline latency automatically with machine-learning event loops. Enterprise-grade security out of the box.
         </p>
 
-        <div className="animate-3" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+        {/* Modern Interactive Actions Row */}
+        <div className="animate-3" style={{
+          display: 'flex',
+          gap: '1rem',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+        }}>
           <a href="#pricing" style={{
-            background: '#FFC801', color: '#172B36',
-            padding: '0.85rem 2rem', borderRadius: '0.5rem',
-            fontWeight: 700, fontFamily: 'var(--font-mono)', textDecoration: 'none',
-            fontSize: '1rem', transition: 'background 150ms ease-out, transform 150ms ease-out',
+            background: 'var(--forsythia, #FFC801)',
+            color: 'var(--oceanic-noir, #172B36)',
+            padding: '0.9rem 2.2rem',
+            borderRadius: '0.5rem',
+            fontWeight: 600,
+            fontSize: '0.95rem',
+            textDecoration: 'none',
+            fontFamily: 'var(--font-mono, monospace)',
+            boxShadow: '0 4px 20px rgba(255, 200, 1, 0.15)',
+            transition: 'transform 150ms ease-out, background 150ms ease-out',
           }}
-          onMouseEnter={e => { e.currentTarget.style.background='#FF9932'; e.currentTarget.style.transform='translateY(-2px)'; }}
-          onMouseLeave={e => { e.currentTarget.style.background='#FFC801'; e.currentTarget.style.transform='translateY(0)'; }}
-          >Start Free Trial</a>
+          onMouseEnter={e => { e.currentTarget.style.background = 'var(--deep-saffron, #FF9932)'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
+          onMouseLeave={e => { e.currentTarget.style.background = 'var(--forsythia, #FFC801)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+          >
+            Initialize Matrix
+          </a>
 
           <a href="#features" style={{
-            border: '1px solid rgba(209,232,226,0.3)', color: '#D9E8E2',
-            padding: '0.85rem 2rem', borderRadius: '0.5rem',
-            fontWeight: 500, textDecoration: 'none', fontSize: '1rem',
-            transition: 'border-color 150ms ease-out, transform 150ms ease-out',
+            background: 'rgba(17, 76, 90, 0.2)',
+            border: '1px solid rgba(209, 232, 226, 0.15)',
+            color: 'var(--arctic-powder, #F1F6F4)',
+            padding: '0.9rem 2.2rem',
+            borderRadius: '0.5rem',
+            fontWeight: 600,
+            fontSize: '0.95rem',
+            textDecoration: 'none',
+            transition: 'all 150ms ease-out',
           }}
-          onMouseEnter={e => { e.currentTarget.style.borderColor='#FFC801'; e.currentTarget.style.transform='translateY(-2px)'; }}
-          onMouseLeave={e => { e.currentTarget.style.borderColor='rgba(209,232,226,0.3)'; e.currentTarget.style.transform='translateY(0)'; }}
-          >See How It Works →</a>
+          onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--forsythia, #FFC801)'; e.currentTarget.style.background = 'rgba(17, 76, 90, 0.4)'; }}
+          onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(209, 232, 226, 0.15)'; e.currentTarget.style.background = 'rgba(17, 76, 90, 0.2)'; }}
+          >
+            Documentation →
+          </a>
         </div>
 
-        {/* Stats row */}
+        {/* Trust Stats Row */}
         <div className="animate-3" style={{
-          display: 'flex', gap: '3rem', justifyContent: 'center', flexWrap: 'wrap',
-          marginTop: '4rem', paddingTop: '3rem',
-          borderTop: '1px solid rgba(209,232,226,0.1)',
+          display: 'flex',
+          gap: '4rem',
+          justifyContent: 'center',
+          flexWrap: 'wrap',
+          marginTop: '5rem',
+          paddingTop: '3rem',
+          borderTop: '1px solid rgba(209, 232, 226, 0.06)',
         }}>
-          {[['200+','Integrations'],['99.9%','Uptime SLA'],['<10ms','API Latency'],['50k+','Teams']].map(([num, label]) => (
+          {[
+            ['200+', 'Connectors'],
+            ['99.99%', 'Uptime SLA'],
+            ['<10ms', 'Core Latency'],
+          ].map(([num, label]) => (
             <div key={label} style={{ textAlign: 'center' }}>
-              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '1.8rem', fontWeight: 700, color: '#FFC801' }}>{num}</div>
-              <div style={{ fontSize: '0.85rem', color: '#D9E8E2', marginTop: '0.25rem' }}>{label}</div>
+              <div style={{
+                fontFamily: 'var(--font-mono, monospace)',
+                fontSize: '1.75rem',
+                fontWeight: 700,
+                color: 'var(--forsythia, #FFC801)',
+              }}>{num}</div>
+              <div style={{
+                fontSize: '0.75rem',
+                color: 'var(--mystic-mint, #D9E8E2)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                marginTop: '0.25rem',
+                opacity: 0.7
+              }}>{label}</div>
             </div>
           ))}
         </div>
