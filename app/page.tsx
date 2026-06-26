@@ -15,3 +15,7 @@ export default function Home() {
 import FeatureSection from '@/components/sections/FeatureSection';
 // Add inside <main> after <HeroSection />
 <FeatureSection />
+
+import PricingSection from '@/components/sections/PricingSection';
+// Add inside <main> after <FeatureSection />
+<PricingSection />

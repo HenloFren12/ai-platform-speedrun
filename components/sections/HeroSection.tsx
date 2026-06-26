@@ -1,3 +1,5 @@
+'use client'; // <-- This single line fixes the entire error!
+
 export default function HeroSection() {
   return (
     <section id="hero" aria-label="Hero" style={{
